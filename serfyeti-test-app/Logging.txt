@@ -1,0 +1,41 @@
+[INFO]  2013-05-31 01:29:03  1  Creating the driver
+[INFO]  2013-05-31 01:29:03  1  Creating the Thread Driver
+[INFO]  2013-05-31 01:29:03  1  Creating the SYConfig
+[INFO]  2013-05-31 01:29:03  1  Loading property file /home/fabio-mint/Dev/workspace/serfyeti_demo/serfyeti-test-app/src/main/resources/com/globant/serfyeti/core/serfyeti.properties
+[INFO]  2013-05-31 01:29:03  1  Loading property file /home/fabio-mint/Dev/workspace/serfyeti_demo/serfyeti-test-app/serfyeti.properties
+[WARNING]  2013-05-31 01:29:03  1  Timeout must be a number in XML Suite
+[INFO]  2013-05-31 01:29:03  1  Timeout will be 30 as default
+[INFO]  2013-05-31 01:29:03  1  Using firefox as a default
+[INFO]  2013-05-31 01:29:03  1  Using firefox
+[INFO]  2013-05-31 01:29:07  1  Navigating to http://www.alamaula.com/
+[INFO]  2013-05-31 01:29:10  1  Time to load "http://www.alamaula.com/" was 2 seconds.
+[INFO]  2013-05-31 01:29:10  1  Find By.linkText: Publicar tu Clasificado
+[INFO]  2013-05-31 01:29:13  1  Click on By.linkText: Publicar tu Clasificado
+[INFO]  2013-05-31 01:29:18  1  Find By.id: ClassifiedStateId
+[INFO]  2013-05-31 01:29:18  1  Find By.id: ClassifiedStateId
+[INFO]  2013-05-31 01:29:18  1  Find By.id: ClassifiedStateId
+[INFO]  2013-05-31 01:29:18  1  Find By.xpath: .//option[normalize-space(.) = "Chaco"]
+[INFO]  2013-05-31 01:29:18  1  Click on By.xpath: .//option[normalize-space(.) = "Chaco"]
+[INFO]  2013-05-31 01:29:18  1  Find By.id: ClassifiedCityId
+[INFO]  2013-05-31 01:29:18  1  Find By.id: ClassifiedCityId
+[INFO]  2013-05-31 01:29:18  1  Find By.id: ClassifiedCityId
+[INFO]  2013-05-31 01:29:18  1  Find By.xpath: .//option[normalize-space(.) = "Charata"]
+[INFO]  2013-05-31 01:29:18  1  Click on By.xpath: .//option[normalize-space(.) = "Charata"]
+[INFO]  2013-05-31 01:29:19  1  Find By.className: categories
+[INFO]  2013-05-31 01:29:19  1  Find By.xpath: .//a[contains(text(),'Clases / Talleres')]
+[INFO]  2013-05-31 01:29:19  1  Click on By.xpath: .//a[contains(text(),'Clases / Talleres')]
+[INFO]  2013-05-31 01:29:19  1  Find By.className: list-container
+[INFO]  2013-05-31 01:29:19  1  Find By.xpath: .//a[contains(text(),'Idiomas')]
+[INFO]  2013-05-31 01:29:19  1  Click on By.xpath: .//a[contains(text(),'Idiomas')]
+[INFO]  2013-05-31 01:29:19  1  Find By.xpath: //input[@value='Continuar']
+[INFO]  2013-05-31 01:29:19  1  Click on By.xpath: //input[@value='Continuar']
+[INFO]  2013-05-31 01:29:24  1  Find By.id: ClassifiedTitle
+[INFO]  2013-05-31 01:29:26  1  Find By.id: ClassifiedPrice
+[INFO]  2013-05-31 01:29:26  1  Find By.id: ClassifiedBody_ifr
+[INFO]  2013-05-31 01:29:26  1  Find By.xpath: //body[@id='tinymce']/p
+[INFO]  2013-05-31 01:29:27  1  Find By.id: ClassifiedEmail
+[INFO]  2013-05-31 01:29:28  1  Find By.id: ClassifiedPhone
+[INFO]  2013-05-31 01:29:28  1  Find By.xpath: //input[@value='Publicar']
+[INFO]  2013-05-31 01:29:28  1  Click on By.xpath: //input[@value='Publicar']
+[INFO]  2013-05-31 01:29:29  1  Find By.xpath: //*[contains(.,'El email no parece válido.')]
+[INFO]  2013-05-31 01:29:29  1  Driver is closing

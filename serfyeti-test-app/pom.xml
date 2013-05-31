@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.globant.training</groupId>
+    <artifactId>serfyeti-test-app</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+
+    <name>SerfYeti Automation Project</name>
+    <url>http://globant.com</url>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.globant.serfyeti</groupId>
+            <artifactId>serfyeti-dataprovider</artifactId>
+            <version>1.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.globant.serfyeti</groupId>
+            <artifactId>serfyeti</artifactId>
+            <classifier>jar-with-dependencies</classifier>
+            <version>3.0</version>
+        </dependency>
+    </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.0</version>
+                <configuration>
+                    <source>1.6</source>
+                    <target>1.6</target>
+                </configuration>
+            </plugin>
+        </plugins>
+
+    </build>	
+    <repositories>
+        <repository>
+            <id>globant-serfyeti-repository-http</id>
+            <url>http://projects.corp.globant.com/svn/glb_labs-automation/main/dist/release/</url>         
+        </repository>
+    </repositories>
+    <profiles>
+        <profile>
+            <!-- run with mvn clean install -U -Pselenium-tests-xml-3threads -->
+            <id>selenium-tests-xml-3threads</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-surefire-plugin</artifactId>
+                        <version>2.14.1</version>
+                        <configuration>
+                            <suiteXmlFiles>
+                                <suiteXmlFile>src/test/resources/FIREFOX.xml</suiteXmlFile>
+                            </suiteXmlFiles>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+
+        <profile>
+            <!-- run with mvn clean install -U -Pselenium-tests-noxml-3threads-firefox -->
+            <id>selenium-tests-noxml-3threads-firefox</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-surefire-plugin</artifactId>
+                        <version>2.14.1</version>
+                        <configuration>
+                            <includes>
+                                <include>**/Smoke.java</include>
+                            </includes>
+                            <systemPropertyVariables>
+                                <sydriver.browser>FIREFOX</sydriver.browser>
+                                <sydriver.timeout>40</sydriver.timeout>
+                            </systemPropertyVariables>
+                            <properties>
+                                <property>
+                                    <name>listener</name>
+                                    <value>com.globant.serfyeti.core.reporting.ListenerScreenshot</value>
+                                </property>                             
+                            </properties>                                
+                            <parallel>methods</parallel>
+                            <threadCount>3</threadCount>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+        
+        <profile>
+            <!-- run with mvn clean install -U -Pselenium-tests-noxml-nothreads-firefox-->
+            <id>selenium-tests-noxml-nothreads-firefox</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-surefire-plugin</artifactId>
+                        <version>2.14.1</version>
+                        <configuration>
+                            <includes>
+                                <include>**/Smoke.java</include>
+                            </includes>
+                            <systemPropertyVariables>
+                                <sydriver.browser>FIREFOX</sydriver.browser>
+                                <sydriver.timeout>40</sydriver.timeout>
+                            </systemPropertyVariables>
+                            <properties>
+                                <property>
+                                    <name>listener</name>
+                                    <value>com.globant.serfyeti.core.reporting.ListenerScreenshot</value>
+                                </property>                             
+                            </properties>                                
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>        
+        <profile>
+            <!-- run with mvn clean install -U -Pselenium-tests-noxml-3threads-firefoxRD-->
+            <id>selenium-tests-noxml-3threads-firefoxRD</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-surefire-plugin</artifactId>
+                        <version>2.14.1</version>
+                        <configuration>
+                            <includes>
+                                <include>**/Smoke.java</include>
+                            </includes>
+                            <systemPropertyVariables>
+                                <sydriver.browser>FIREFOXRD</sydriver.browser>
+                                <sydriver.timeout>40</sydriver.timeout>
+                            </systemPropertyVariables>
+                            <properties>
+                                <property>
+                                    <name>listener</name>
+                                    <value>com.globant.serfyeti.core.reporting.ListenerScreenshot</value>
+                                </property>                             
+                            </properties>                                
+                            <parallel>methods</parallel>
+                            <threadCount>3</threadCount>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+        
+        <profile>
+            <!-- run with -->
+            <id>selenium-tests-noxml-nothreads-firefoxRD</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-surefire-plugin</artifactId>
+                        <version>2.14.1</version>
+                        <configuration>
+                            <includes>
+                                <include>**/Smoke.java</include>
+                            </includes>
+                            <systemPropertyVariables>
+                                <sydriver.browser>FIREFOXRD</sydriver.browser>
+                                <sydriver.timeout>40</sydriver.timeout>
+                            </systemPropertyVariables>
+                            <properties>
+                                <property>
+                                    <name>listener</name>
+                                    <value>com.globant.serfyeti.core.reporting.ListenerScreenshot</value>
+                                </property>                             
+                            </properties>                                
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>  
+        <profile>
+            <!-- run with -->
+            <id>selenium-tests-noxml-3threads-firefox-reportNG</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-surefire-plugin</artifactId>
+                        <version>2.14.1</version>
+                        <configuration>
+                            <includes>
+                                <include>**/Smoke.java</include>
+                            </includes>
+                            <systemPropertyVariables>
+                                <sydriver.browser>FIREFOX</sydriver.browser>
+                                <sydriver.timeout>40</sydriver.timeout>
+                            </systemPropertyVariables>
+                            <properties>                                                    
+                                <property>                                                           
+                                    <name>usedefaultlisteners</name>                                                            
+                                    <value>false</value>                                                        
+                                </property>                                                    
+                                <property>                                                            
+                                    <name>listener</name>                                                            
+                                    <value>org.uncommons.reportng.HTMLReporter, org.uncommons.reportng.JUnitXMLReporter, com.globant.serfyeti.core.reporting.ListenerScreenshot</value>                                                        
+                                </property>                                                  
+                            </properties> 
+                            <parallel>methods</parallel>
+                            <threadCount>3</threadCount>                                                           
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>              
+
+    </profiles>
+
+</project>

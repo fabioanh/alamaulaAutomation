@@ -1,0 +1,55 @@
+
+<dataSet>
+	<name>createItem</name>
+	<dataRows>
+		<dataRow>
+			<name>createItemData</name>
+			<dataObjects>
+				<dataObject>
+					<name>stateName</name>
+					<value>Chaco</value>
+				</dataObject>
+				<dataObject>
+					<name>cityName</name>
+					<value>Charata</value>
+				</dataObject>
+				<dataObject>
+					<name>categoryName</name>
+					<value>Clases / Talleres</value>
+				</dataObject>
+				<dataObject>
+					<name>subCategoryName</name>
+					<value>Idiomas</value>
+				</dataObject>
+				<dataObject>
+					<name>title</name>
+					<value>Aprende ingles facilmente</value>
+				</dataObject>
+				<dataObject>
+					<name>price</name>
+					<value>199</value>
+				</dataObject>
+				<dataObject>
+					<name>description</name>
+					<value>The best Inglish</value>
+				</dataObject>
+				<dataObject>
+					<name>email</name>
+					<value>glb@glb</value>
+				</dataObject>
+				<dataObject>
+					<name>phone</name>
+					<value>09002020</value>
+				</dataObject>
+				<dataObject>
+					<name>descriptionErrorMessage</name>
+					<value>La descripción debe contener un mínimo de 50 caracteres.</value>
+				</dataObject>
+				<dataObject>
+					<name>emailErrorMessage</name>
+					<value>El email no parece válido.</value>
+				</dataObject>
+			</dataObjects>
+		</dataRow>
+	</dataRows>
+</dataSet>

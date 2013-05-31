@@ -1,0 +1,15 @@
+
+<dataSet>
+	<name>alamaulaSearch</name>
+	<dataRows>
+		<dataRow>
+			<name>Portatil</name>
+			<dataObjects>
+				<dataObject>
+					<name>criteria</name>
+					<value>Portatil</value>
+				</dataObject>
+			</dataObjects>
+		</dataRow>
+	</dataRows>
+</dataSet>

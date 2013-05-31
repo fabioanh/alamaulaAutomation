@@ -1,0 +1,35 @@
+
+<dataSet>
+	<name>messageForm</name>
+	<dataRows>
+		<dataRow>
+			<name>messageData</name>
+			<dataObjects>
+				<dataObject>
+					<name>searchQuery</name>
+					<value>Portatil</value>
+				</dataObject>
+				<dataObject>
+					<name>nombre</name>
+					<value>[</value>
+				</dataObject>
+				<dataObject>
+					<name>mensaje</name>
+					<value>Hola</value>
+				</dataObject>
+				<dataObject>
+					<name>email</name>
+					<value>unnombre@hola</value>
+				</dataObject>
+				<dataObject>
+					<name>privado</name>
+					<value>true</value>
+				</dataObject>
+				<dataObject>
+					<name>invalidMessage</name>
+					<value>El mail no tiene un formato válido</value>
+				</dataObject>
+			</dataObjects>
+		</dataRow>
+	</dataRows>
+</dataSet>
